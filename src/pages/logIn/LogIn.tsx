@@ -43,7 +43,7 @@ const LogIn = () => {
                         onChange={setCheck}
                     />
                     <CustomButton onClick={() => submit()} disabled={false}>
-                        <b>Войти </b>
+                        <b>Войти</b>
                     </CustomButton>
                 </div>
             </div>
