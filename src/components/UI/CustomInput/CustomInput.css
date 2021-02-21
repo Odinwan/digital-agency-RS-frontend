@@ -1,0 +1,35 @@
+.wrapperInput {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.wrapperInput input {
+    padding: 5px;
+    background: #FBF9F9;
+    border: 0.2px solid #AAA7A7;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-size: 16px;
+}
+.wrapperInput label {
+    animation: fadeInDown 500ms ease-in-out;
+    margin-bottom: 5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 11px;
+    color: #000000;
+    -webkit-animation: fadeInDown 500ms ease-in-out;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

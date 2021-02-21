@@ -1,0 +1,46 @@
+.wrapper-page {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper-reg {
+    position: relative;
+    padding: 33px 42px;
+    background: #FFFFFF;
+    border: 0.5px solid #AAA7A7;
+    box-sizing: border-box;
+    border-radius: 3px;
+    min-width: 500px;
+}
+
+.wrapper-reg img {
+    position: absolute;
+    top: 33px;
+    right: 42px;
+
+}
+
+.wrapper-reg .title {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 14px;
+    color: #000000;
+}
+
+.styleEmail {
+    margin-bottom: 20px;
+}
+
+.wrapperButtonCheckBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

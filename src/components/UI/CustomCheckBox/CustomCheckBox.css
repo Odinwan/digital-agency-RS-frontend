@@ -1,0 +1,8 @@
+.wrapperCheckBox {
+    display: flex;
+    align-items: center;
+}
+
+.wrapperCheckBox div {
+    margin-left: 10px;
+}

@@ -1,0 +1,7 @@
+.customButton {
+    padding: 5px 15px;
+    background: #FBF9F9;
+    border: 0.3px solid #AAA7A7;
+    box-sizing: border-box;
+    border-radius: 3px;
+}

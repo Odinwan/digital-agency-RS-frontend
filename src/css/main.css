@@ -1,0 +1,15 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.mainWrapper {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+}

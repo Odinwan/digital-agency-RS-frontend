@@ -1,0 +1,24 @@
+.wrapper-common-navbar {
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    position: fixed;
+    justify-content: space-around;
+}
+
+.wrapper-common-navbar a {
+    transition: 400ms;
+    width: 100%;
+    text-align: center;
+    color: black;
+    padding: 20px 0;
+    background-color: white;
+    -webkit-transition: 400ms;
+    -moz-transition: 400ms;
+    -ms-transition: 400ms;
+    -o-transition: 400ms;
+}
+.wrapper-common-navbar a:hover {
+    color: rgb(255, 255, 255);
+    background-color: rgb(97, 94, 255);
+}
