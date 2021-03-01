@@ -4,12 +4,11 @@ import {
     Switch,
     Route,
 } from "react-router-dom";
-import About from './About';
-
 import Users from './Users';
 import NavBar from './../components/common/NavBar';
 import LogIn from './logIn/LogIn';
 import Registration from './registration/Registration';
+import HomePage from './homePage/HomePage';
 
 const Routing = () => {
 
@@ -18,14 +17,14 @@ const Routing = () => {
             <Router>
                 <NavBar />
                 <Switch>
-                    <Route path="/registration">
-                        <Registration />
-                    </Route>
-                    <Route path="/about">
-                        <About />
+                    <Route path="/homePage">
+                        <HomePage />
                     </Route>
                     <Route path="/users">
                         <Users />
+                    </Route>
+                    <Route path="/registration">
+                        <Registration />
                     </Route>
                     <Route path="/">
                         <LogIn />

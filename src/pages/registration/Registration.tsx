@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState, useEffect} from 'react';
 import '../registration/Registration.css'
 import logo from '../../img/logo.svg'
 import CustomInput from '../../components/UI/CustomInput/CustomInput';
@@ -11,41 +11,59 @@ const Registration = () => {
     const [pass, setPass] = useState<string>('')
     const [passCheck, setPassCheck] = useState<string>('')
     const [check, setCheck] = useState<boolean>(false)
+    const [isSubmit, setIsSubmit] = useState<boolean>(false)
+
+    useEffect(() => {
+        if (email !== '' && pass !== '' && passCheck !== '' && check) {
+            setIsSubmit(false)
+        } else {
+            setIsSubmit(true)
+        }
+    }, [email, pass, passCheck, check]);
+
+    const submit = () => {
+        console.log(`вы вошли логин:${email} , пароль:${pass} , повтор:${passCheck}`)
+    }
+
+    const onChangeEmail = (text: string) => {
+        setEmail(text)
+    }
+
 
     return <>
         <div className={'wrapper-page'}>
             <div className="wrapper-reg">
-                <div className='title'>Регистрация</div>
+                <div className='title'>Sign Up</div>
                 <img src={logo} alt="logo"/>
                 <CustomInput
                     className={'styleEmail'}
                     value={email}
-                    onChange={setEmail}
-                    placeHolder={'example@mail.ru'}
-                    label={'Логин или эл. адресс'}
+                    onChange={onChangeEmail}
+                    placeHolder={'example@email.com'}
+                    label={'E-mail'}
                 />
                 <CustomInput
                     className={'styleEmail'}
                     value={pass}
                     onChange={setPass}
-                    placeHolder={'Введите пароль'}
-                    label={'Пароль'}
+                    placeHolder={'********'}
+                    label={'Password'}
                 />
                 <CustomInput
                     className={'styleEmail'}
                     value={passCheck}
                     onChange={setPassCheck}
-                    placeHolder={'Повторите пароль'}
-                    label={'Пароль'}
+                    placeHolder={'********'}
+                    label={'Repeat password'}
                 />
                 <div className={'wrapperButtonCheckBox'}>
                     <CustomCheckBox
-                        label={'Вы согласны с правилами?'}
+                        label={'Accept the terms'}
                         value={check}
                         onChange={setCheck}
                     />
-                    <CustomButton onClick={() => alert('вы зарегестрировались')} disabled={!check}>
-                        <b>Зарегистрироваться</b>
+                    <CustomButton onClick={() => submit()} disabled={isSubmit}>
+                        <b>Sign Up</b>
                     </CustomButton>
                 </div>
             </div>

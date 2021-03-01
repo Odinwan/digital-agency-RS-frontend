@@ -23,7 +23,7 @@ const CustomInput = (props:CustomInputProps) => {
             <input 
                 type="text" 
                 value={value} 
-                onChange={(e) => onChange(e.target.value)} 
+                onChange={(e) => {onChange(e.target.value)}} 
                 id='input' 
                 placeholder={placeHolder} 
             />

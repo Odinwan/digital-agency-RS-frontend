@@ -19,7 +19,7 @@ const CustomButton = (props:CustomButtonProps) => {
     return <>
         <button 
             className={`${className} customButton`} 
-            disabled={false} 
+            disabled={disabled} 
             onClick={() => onClick()}
         >
             {children}
